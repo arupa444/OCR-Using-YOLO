@@ -6,12 +6,12 @@ import os
 import numpy as np
 
 # Load YOLO model once
-model = YOLO("yolo11n.pt")
+model = YOLO("yolo11s.pt")
 
 st.title("🔍 YOLO Object Detection App")
 st.write("Upload one or more images to run YOLO detection.")
 
-# Allow multiple uploads
+# Allow multiple uploads,
 uploaded_files = st.file_uploader(
     "Upload images",
     type=["jpg", "jpeg", "png", "bmp", "gif"],
