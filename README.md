@@ -1,30 +1,39 @@
-# Performing Object Detection Using YOLO11n
+# Performing Object Detection Using YOLO11 (YOLOv11n / YOLOv11s)
 
-This project demonstrates **object detection** using the YOLO11n model. The notebook walks through the process of loading the YOLO model, performing inference on images/videos, and visualizing the predictions.
+This project demonstrates **object detection** using the [Ultralytics YOLO](https://docs.ultralytics.com) models (`yolo11n.pt` and `yolo11s.pt`).
+It includes:
+
+* A **Jupyter Notebook** for experimenting with YOLO detection.
+* **Streamlit apps** for detecting objects in images and videos.
+* A **Webcam script** for real-time detection.
 
 ---
 
 ## 🚀 Features
 
-* Load and configure **YOLO11n** pre-trained model.
-* Perform object detection on:
+* Detect objects in:
 
-  * Images
-  * Videos
-  * Webcam stream
-* Visualize bounding boxes and class labels.
-* Export detection results.
+  * Single Image
+  * Multiple Images
+  * Image or Video
+  * Live Webcam Stream
+* Real-time bounding boxes, labels, and confidence scores.
+* Class-wise detection summary.
+* Streamlit apps for interactive browser usage.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── performingObjectDetectionUsingYOLO11n.ipynb   # Main Jupyter Notebook
-├── you can use COLOB                             # Dependencies
+├── performingObjectDetectionUsingYOLO11n.ipynb   # Notebook version
+├── objectDetectionSoloImg.py                     # Streamlit app: single image
+├── objectDetectionMultipleImg.py                 # Streamlit app: multiple images
+├── objectDetectionSoloImgVid.py                  # Streamlit app: image or video
+├── useCamToFind.py                               # Live webcam detection
 ├── requirements.txt                              # Dependencies
-├── README.md                                     # Project Documentation
-└── runs/                                         # YOLO output results (images/videos with predictions)
+├── README.md                                     # Project documentation
+└── runs/                                         # YOLO outputs (auto-created)
 ```
 
 ---
@@ -34,11 +43,11 @@ This project demonstrates **object detection** using the YOLO11n model. The note
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/YOLO11n-ObjectDetection.git
-   cd YOLO11n-ObjectDetection
+   git clone https://github.com/your-username/YOLO11-ObjectDetection.git
+   cd YOLO11-ObjectDetection
    ```
 
-2. Create and activate a virtual environment:
+2. Create a virtual environment:
 
    ```bash
    python -m venv .venv
@@ -84,14 +93,48 @@ Inside the notebook:
 
 ---
 
+### 2. Run Streamlit Apps
+
+#### 🔹 Single Image Detection
+
+```bash
+streamlit run objectDetectionSoloImg.py
+```
+
+#### 🔹 Multiple Image Detection
+
+```bash
+streamlit run objectDetectionMultipleImg.py
+```
+
+#### 🔹 Image or Video Detection
+
+```bash
+streamlit run objectDetectionSoloImgVid.py
+```
+
+### 3. Live Webcam Detection
+
+```bash
+python useCamToFind.py
+```
+
+* Uses your default webcam (`source=1`).
+* Opens a live window with bounding boxes.
+* Saves detection results in `runs/detect/`.
+
+---
+
 ## 📦 Output
 
-* Detected images and videos are saved in:
+* Annotated images/videos are shown directly in the apps.
+* YOLO saves all processed results inside:
 
   ```
   runs/detect/
   ```
-* Each run creates a new folder with the timestamp.
+
+  Each execution creates a new timestamped folder.
 
 ---
 
@@ -100,20 +143,21 @@ Inside the notebook:
 * Python 3.8+
 * Jupyter Notebook
 * Ultralytics YOLO
+* Streamlit
+* Pillow
+* NumPy
 * OpenCV
-* Torch
+* Torch + TorchVision
 
 Install directly with:
 
 ```bash
-pip install ultralytics opencv-python torch torchvision
+pip install ultralytics streamlit pillow numpy opencv-python torch torchvision
 ```
 
 ---
 
-## 🛠 Example
-
-Example of running detection on an image:
+## 🛠 Example (Notebook)
 
 ```python
 from ultralytics import YOLO
@@ -127,4 +171,4 @@ results.show()
 
 ## 📄 License
 
-This project is licensed under the MIT License - feel free to use and modify.
+This project is licensed under the MIT License. Feel free to use and modify.
