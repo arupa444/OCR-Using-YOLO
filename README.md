@@ -43,8 +43,8 @@ It includes:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/YOLO11-ObjectDetection.git
-   cd YOLO11-ObjectDetection
+   git clone https://github.com/arupa444/OCR-Using-YOLO.git
+   cd OCR-Using-YOLO
    ```
 
 2. Create a virtual environment:
