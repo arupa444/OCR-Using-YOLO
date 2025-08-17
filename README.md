@@ -22,6 +22,7 @@ This project demonstrates **object detection** using the YOLO11n model. The note
 ```
 ├── performingObjectDetectionUsingYOLO11n.ipynb   # Main Jupyter Notebook
 ├── you can use COLOB                             # Dependencies
+├── requirements.txt                              # Dependencies
 ├── README.md                                     # Project Documentation
 └── runs/                                         # YOLO output results (images/videos with predictions)
 ```
