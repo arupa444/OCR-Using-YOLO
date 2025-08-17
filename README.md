@@ -3,7 +3,7 @@
 This project demonstrates **object detection** using the [Ultralytics YOLO](https://docs.ultralytics.com) models (`yolo11n.pt` and `yolo11s.pt`).
 It includes:
 
-* A **Jupyter Notebook** for experimenting with YOLO detection.
+* A **Jupyter Notebook/Google Colab** for experimenting with YOLO detection.
 * **Streamlit apps** for detecting objects in images and videos.
 * A **Webcam script** for real-time detection.
 
@@ -65,7 +65,7 @@ It includes:
 
 ## 🖥️ Usage
 
-### 1. Run the Jupyter Notebook
+### 1. Run the Jupyter Notebook/Google Colab
 
 ```bash
 jupyter notebook performingObjectDetectionUsingYOLO11n.ipynb
@@ -141,7 +141,7 @@ python useCamToFind.py
 ## 📌 Requirements
 
 * Python 3.8+
-* Jupyter Notebook
+* Jupyter Notebook/Google Colab
 * Ultralytics YOLO
 * Streamlit
 * Pillow
